@@ -1,0 +1,48 @@
+### Criar novo usuário, cadastro: 
+
+POST http://localhost:3333/auth/register
+Content-Type: application/json
+
+{
+    "name": "user-exemplo",
+    "email": "exemple@gmail.com",
+    "password": "123456"
+}
+
+### Login:
+
+POST http://localhost:3333/authenticate
+Content-Type: application/json
+
+{
+    "email": "exemple@gmail.com",
+    "password": "123456"
+}
+
+### Autenticação:
+
+GET http://localhost:3333/project
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlZTBmN2YxYzFjZjNkMGRlYzM5M2U5NSIsImlhdCI6MTU5MTgwMTg1OCwiZXhwIjoxNTkxODg4MjU4fQ.ubojdIATLrCj0T0UAwX03s5EhLRrK6gGrXkcN45Zt5I
+
+
+### Send E-mail:
+
+POST http://localhost:3333/send_mail
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlZTBmN2YxYzFjZjNkMGRlYzM5M2U5NSIsImlhdCI6MTU5MTgwMTg1OCwiZXhwIjoxNTkxODg4MjU4fQ.ubojdIATLrCj0T0UAwX03s5EhLRrK6gGrXkcN45Zt5I
+Content-Type: application/json
+
+{
+    "email": "exemplo@gmail.com"
+}
+
+### Reset Password:
+
+POST http://localhost:3333/reset_password
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlZDE2ZDVlYTc1MzMwMjZiZjM2MDA2ZSIsImlhdCI6MTU5MTczNzYzOCwiZXhwIjoxNTkxODI0MDM4fQ.nUw0sNRp-0gT90M90OSE2DCfWjyyFbj-uOTTfM8hKBw
+Content-Type: application/json
+
+{
+    "email": "exemplo@gmail.com",
+    "token": "1b94f5b3386ce17437ebeaaca29bef0df95a899a",
+    "password": "1234"
+}
